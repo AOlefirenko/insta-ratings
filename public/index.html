@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="libs/lumx/dist/lumx.css">
+    <link rel="stylesheet" href="libs/mdi/css/materialdesignicons.min.css">
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/lumx/dist/lumx.min.js"></script>
+    <script src="libs/rxjs/dist/rx.all.js"></script>
+    <script src="libs/lodash/lodash.min.js"></script>
+    <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+    <script src="libs/angular-google-maps/dist/angular-google-maps.min.js"></script>
+
+    <style>
+        .popular-users {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .popular-users > img {
+            width: 50px;
+            height: 50px;
+        }
+        .angular-google-map-container { height: 200px;width:400px; }
+    </style>
+</head>
+<body ng-app="app">
+<h1>INSTAGRAM</h1>
+<a class="btn btn--m btn--blue btn--raised" href="http://localhost:3333/auth/instagram">sign in</a>
+
+<div ng-controller="AppController">
+
+    <h5>{{profile.full_name}}</h5>
+
+    <div>{{profile.username}}</div>
+
+    <div>{{counts.follows}} / {{counts.followed_by}}</div>
+
+    <img ng-src="{{profile.profile_picture}}">
+
+    <ui-gmap-google-map center="map.center" zoom="map.zoom" options="options">
+        <ui-gmap-markers models="coords"  coords="'self'" icon="'icon'"></ui-gmap-markers>
+    </ui-gmap-google-map>
+
+
+    <div class="popular-users">
+        <img ng-src="{{user.profile_picture}}" ng-repeat="user in popular">
+    </div>
+
+
+
+    <pre>
+        {{profile | json}}
+    </pre>
+
+
+
+</div>
+
+<script src="app/app.js"></script>
+<script src="auth-interceptor.js"></script>
+
+</body>
+</html>
