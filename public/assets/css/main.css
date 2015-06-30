@@ -726,3 +726,259 @@ h2 {
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
+.h1ins {
+    font-family: billabong;
+    font-size: 56pt;
+    color: #ffffff;
+}
+#header-il {
+    background: #0000FF;
+    margin-top: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align:center;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 300px;
+    width: 100%;
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#result-block {
+    background: #f5f5f5;
+    margin-top: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align:center;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 300px;
+    width: 100%;
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+#result-block h1 {
+    color: black;
+    font-weight: 700;
+    margin-bottom: 25px;
+    font-size: 60px;
+}
+
+#result-block h2 {
+    color: black;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+#result-block i {
+    color: black;
+    font-size: 45px;
+}
+
+#result-block2 {
+    background: #ff00ff;
+    margin-top: 0px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    text-align:center;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 400px;
+    width: 100%;
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.h1rating-number {
+    color: #ffffff;
+    font-size: 80pt;
+
+}
+
+#result-block2 h1 {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 25px;
+
+}
+
+#result-followers {
+    background: #E6E6FA;
+    margin-top: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align:center;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 300px;
+    width: 100%;
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+#result-followers h1 {
+    color: black;
+    font-weight: 700;
+    margin-bottom: 25px;
+    font-size: 60px;
+}
+
+#result-followers h2 {
+    color: black;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+#result-followers i {
+    color: black;
+    font-size: 45px;
+}
+
+
+#result-follows {
+    background: #483D8B;
+    margin-top: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align:center;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 300px;
+    width: 100%;
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+#result-follows h1 {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 25px;
+    font-size: 60px;
+}
+
+#result-follows h2 {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+#result-follows i {
+    color: #ffffff;
+    font-size: 45px;
+}
+
+#result-mediacounts {
+    background: #8A2BE2;
+    margin-top: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align:center;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 300px;
+    width: 100%;
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+#result-mediacounts h1 {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 25px;
+    font-size: 60px;
+}
+
+#result-mediacounts h2 {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+#result-mediacounts i {
+    color: #ffffff;
+    font-size: 45px;
+}
+
+
+#result-people {
+    background: #4B0082;
+    margin-top: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align:center;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 300px;
+    width: 100%;
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#result-people h1 {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 25px;
+    font-size: 60px;
+}
