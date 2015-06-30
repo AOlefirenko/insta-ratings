@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/instastyle.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/lumx/dist/lumx.min.js"></script>
+    <script src="libs/rxjs/dist/rx.all.js"></script>
+    <script src="libs/lodash/lodash.min.js"></script>
+    <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+    <script src="libs/angular-google-maps/dist/angular-google-maps.min.js"></script>
+
+
+</head>
+<body style="background: #ffff66" ng-app="app">
+
+
+<div class="col-md-9 center-block">
+
+
+<h1 class="h3ins text-center">Instagram</h1>
+
+        <button type="button" class="btn btn-primary btn-lg" href="http://localhost:3333/auth/instagram">Войти</button>
+
+
+
+<div class="panel panel-default" ng-controller="AppController">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center">{{profile.username}}</h3>
+    </div>
+    <div class="panel-body text-center">
+        <img ng-src="{{profile.profile_picture}}" class="img-circle">
+        <h5>{{profile.full_name}}</h5>
+    </div>
+</div>
+
+    <div class="panel panel-default" ng-controller="AppController">
+        <div class="panel-heading table-responsive no-border">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th class="text-center">Вы подписаны на</th>
+                        <th class="text-center">На вас подписаны</th>
+                    </tr>
+                    </thead>
+
+                </table>
+        </div>
+
+        <div class="panel-body text-center">
+
+
+                <table class="table">
+                    <tbody>
+                    <tr>
+                        <td class="text-center"><h1>{{counts.follows}}</h1></td>
+                        <td class="text-center"><h1>{{counts.followed_by}}</h1></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+
+        </div>
+    </div>
+
+<div class="panel panel-default" ng-controller="AppController">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center">Данные</h3>
+    </div>
+    <div class="panel-body">
+        <pre>
+        {{profile | json}}
+    </pre>
+    </div>
+</div>
+
+<div class="panel panel-default" ng-controller="AppController">
+    <div class="panel-heading">
+        <h3 class="panel-title">Карта</h3>
+    </div>
+    <div class="panel-body">
+        <ui-gmap-google-map center="map.center" zoom="map.zoom" options="options">
+            <ui-gmap-markers models="coords"  coords="'self'" icon="'icon'"></ui-gmap-markers>
+        </ui-gmap-google-map>
+    </div>
+</div>
+
+
+<div class="panel panel-default" ng-controller="AppController">
+    <div class="panel-heading">
+        <h3 class="panel-title">Люди которые проверяют свой рейтинг</h3>
+    </div>
+    <div class="panel-body">
+        <img ng-src="{{user.profile_picture}}" ng-repeat="user in popular">
+
+    </div>
+</div>
+
+</div>
+
+
+<script src="app/app.js"></script>
+<script src="auth-interceptor.js"></script>
+
+</body>
+</html>
