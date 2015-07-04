@@ -13,6 +13,7 @@ app.controller('AppController', function ($scope, $http) {
         localStorage.setItem('token', result.accessToken);
         getPopularUsers();
         getLocations();
+        getStat();
     })
 
     function getPopularUsers() {
@@ -22,7 +23,17 @@ app.controller('AppController', function ($scope, $http) {
 
         })
     }
-    function getLocations(){
+
+    function getStat() {
+        $http.get('http://localhost:3333/insta/stat').success(function (data) {
+            if (!data) return;
+            $scope.stat = data;
+            $scope.rating = Math.round(data.likesAvg + data.commentsAvg + $scope.counts.media * 0.01);
+
+        })
+    }
+
+    function getLocations() {
         $scope.coords = [];
         $http.get('http://localhost:3333/insta/locations').success(function (data) {
             if (!data) return;

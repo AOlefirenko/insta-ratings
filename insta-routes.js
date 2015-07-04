@@ -67,14 +67,14 @@ router.get('/stat', function (req, res) {
         topByComments: []
     };
 
-    var topMedia = published.
-        map(function (x) {
-            return {
-                commentsCount: x.comments.count,
-                likesCount:x.likes.count,
-                pic:x.standard_resolution && x.standard_resolution.url
-            }
-        });
+    //var topMedia = published.
+    //    map(function (x) {
+    //        return {
+    //            commentsCount: x.comments.count,
+    //            likesCount:x.likes.count,
+    //            pic:x.standard_resolution && x.standard_resolution.url
+    //        }
+    //    }).take(10);
         //.startWith(accumulator).
         //scan(function (acc, x) {
         //
@@ -84,15 +84,20 @@ router.get('/stat', function (req, res) {
     Rx.Observable.zip(
         averageLikes,
         averageComents,
-        topMedia.toArray(),
-        function (likes, comments,topMedia) {
-            return {likesAvg: likes, commentsAvg: comments,topMedia:topMedia};
+        function (likes, comments) {
+            return {likesAvg: likes, commentsAvg: comments};
         }).subscribe(function (x) {
             res.send(x);
         });
 
     //subscription.toArray()
 });
+
+router.get('/rating', function (req, res) {
+
+});
+
+
 
 router.get('/locations', function (req, res) {
     var url = 'https://api.instagram.com/v1/users/self/media/recent';

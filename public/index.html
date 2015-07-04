@@ -15,7 +15,7 @@
     <link href="assets/css/animations.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
 
-
+    <link rel="stylesheet" href="http://css-spinners.com/css/spinner/spinner.css" type="text/css">
     <!-- JavaScripts needed at the beginning
     ================================================== -->
     <script src="libs/angular/angular.min.js"></script>
@@ -80,8 +80,8 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h1>Ваш рейтинг</h1>
                 <br>
-
-                <h1 class="h1rating-number">РЕЙТИНГ</h1>
+                <div class="spinner-loader" ng-if="!rating"></div>
+                <h1 class="h1rating-number">{{rating}}</h1>
             </div>
         </div>
         <!-- /row -->
