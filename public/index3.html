@@ -2,138 +2,63 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Твой рейтинг в Instagram</title>
+    <title></title>
+    <link rel="stylesheet" href="libs/lumx/dist/lumx.css">
+    <link rel="stylesheet" href="libs/mdi/css/materialdesignicons.min.css">
 
-    <link href="assets/css/hover_pack.css" rel="stylesheet">
-
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="assets/css/main.css" rel="stylesheet">
-    <link href="assets/css/colors/color-74c9be.css" rel="stylesheet">
-    <link href="assets/css/animations.css" rel="stylesheet">
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-
-
-    <!-- JavaScripts needed at the beginning
-    ================================================== -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
     <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/lumx/dist/lumx.min.js"></script>
     <script src="libs/rxjs/dist/rx.all.js"></script>
     <script src="libs/lodash/lodash.min.js"></script>
     <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
     <script src="libs/angular-google-maps/dist/angular-google-maps.min.js"></script>
-    <!-- Main Jquery & Hover Effects. Should load first -->
 
+    <style>
+        .popular-users {
+            display: flex;
+            flex-wrap: wrap;
+        }
 
-</head>
-
-
+        .popular-users > img {
+            width: 50px;
+            height: 50px;
+        }
+        .angular-google-map-container { height: 200px;width:400px; }
+    </style>
 </head>
 <body ng-app="app">
+<h1>INSTAGRAM</h1>
+<a class="btn btn--m btn--blue btn--raised" href="http://localhost:3333/auth/instagram">sign in</a>
 
-<! ========== header-il BLOCK ==============================================================================================
-=============================================================================================================================>
-<div id="header-il" ng-controller="AppController">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h1 class="h1ins text-center">Instagram</h1>
+<div ng-controller="AppController">
 
-                <button type="button" class="btn btn-primary btn-lg" href="http://localhost:3333/auth/instagram">Войти</button>
-            </div>
-        </div><!-- /row -->
-    </div><!-- /container -->
-</div><! --/header-il-block -->
+    <h5>{{profile.full_name}}</h5>
 
-<! ========== RESULT BLOCK ==============================================================================================
-=============================================================================================================================>
-<div id="result-block" ng-controller="AppController">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h1>{{profile.username}}</h1>
-                <img ng-src="{{profile.profile_picture}}" class="img-circle">
-                <h2>{{profile.full_name}}</h2>
-            </div>
-        </div><!-- /row -->
-    </div><!-- /container -->
-</div><! --/result-block -->
+    <div>{{profile.username}}</div>
+
+    <div>{{counts.follows}} / {{counts.followed_by}}</div>
+
+    <img ng-src="{{profile.profile_picture}}">
+
+    <ui-gmap-google-map center="map.center" zoom="map.zoom" options="options">
+        <ui-gmap-markers models="coords"  coords="'self'" icon="'icon'"></ui-gmap-markers>
+    </ui-gmap-google-map>
 
 
-<! ========== RESULT BLOCK RATING ==============================================================================================
-=============================================================================================================================>
-<div id="result-block2" ng-controller="AppController">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h1>Ваш рейтинг</h1>
-                <br>
-                <h1 class="h1rating-number">РЕЙТИНГ</h1>
-            </div>
-        </div><!-- /row -->
-    </div><!-- /container -->
-</div><! --/result-block -->
-
-
-<! ========== RESULT BLOCK FOLLOWERS ==============================================================================================
-=============================================================================================================================>
-<div id="result-followers" ng-controller="AppController">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h1>На вас подписаны</h1>
-                <br>
-                <h1 class="h1rating-number">{{counts.followed_by}}</h1>
-            </div>
-        </div><!-- /row -->
-    </div><!-- /container -->
-</div><! --/result-block -->
-
-
-<! ========== RESULT BLOCK FOLLOWS ==============================================================================================
-=============================================================================================================================>
-<div id="result-follows" ng-controller="AppController">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h1>Вы подписаны на</h1>
-                <br>
-                <h1 class="h1rating-number">{{counts.follows}}</h1>
-            </div>
-        </div><!-- /row -->
-    </div><!-- /container -->
-</div><! --/result-block -->
-
-
-<! ========== RESULT BLOCK MEDIA COUNTS ==============================================================================================
-=============================================================================================================================>
-<div id="result-mediacounts" ng-controller="AppController">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h1>Всего публикаций</h1>
-                <br>
-                <h1 class="h1rating-number">{{counts.media}}</h1>
-            </div>
-        </div><!-- /row -->
-    </div><!-- /container -->
-</div><! --/result-block -->
-
-<! ========== RESULT BLOCK PEOPLE ==============================================================================================
-=============================================================================================================================>
-<div id="result-people" ng-controller="AppController">
+    <div class="popular-users">
+        <img ng-src="{{user.profile_picture}}" ng-repeat="user in popular">
+    </div>
 
 
 
-                <h1>Сейчас проверяют свой рейтинг</h1>
-                <br>
-                <img ng-src="{{user.profile_picture}}" ng-repeat="user in popular">
+    <pre>
+        {{profile | json}}
+    </pre>
 
 
 
-</div><! --/result-block -->
-
+</div>
 
 <script src="app/app.js"></script>
 <script src="auth-interceptor.js"></script>

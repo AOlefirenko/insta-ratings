@@ -1,0 +1,23 @@
+{
+  "name": "insta-ratings",
+  "version": "0.0.0",
+  "homepage": "https://github.com/AOlefirenko/insta-ratings",
+  "authors": [
+    "Andrey Olefirenko <ole.olefirenko>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.1",
+    "lodash": "~3.10.0",
+    "rxjs": "~2.5.2",
+    "angular-google-maps": "~2.1.5"
+  }
+}
