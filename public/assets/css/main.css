@@ -1,20 +1,15 @@
 /*
- * Author: Carlos Alvarez
- * URL: http://alvarez.is
- *
- * Project Name: MARCO - One Page Bootstrap 3 Theme
- * Version: 1.0
- * URL: http://blacktie.co
+ робослон css roboslon
  */
  
 /* FONTS */
-@import url(http://fonts.googleapis.com/css?family=Ruda:400,900,700);
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans|Roboto&subset=latin,cyrillic);
 
 /* OVERALL ASPECT */
 
 body {
     background-color: #f2f2f2;
-    font-family: 'Ruda', sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     font-weight: 400;
     font-size: 14px;
     color: #555;
@@ -26,7 +21,7 @@ body {
 
 /* Titles */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Ruda', sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     font-weight: 900;
     color: #333;
 }
@@ -40,11 +35,21 @@ p {
 
 .centered {
     text-align: center;
+    align-content: center;
+    align-items: center;
 }
 
 .goleft {
 	text-align: left;
 }
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px;
+}
+
+
 
 /* Links */
 a {
@@ -335,10 +340,7 @@ p.capitalize:first-letter {
     -o-background-size: 100%;
     background-size: 100%;
 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+
 }
 
 #headerwrap h1 {
@@ -365,8 +367,13 @@ p.capitalize:first-letter {
 
 /* Footer Wrap */
 
+.padding-footer {
+
+    padding-bottom: 50px;
+}
+
 #f {
-	background-color: #1b1b1b;
+	background-color: #004FFF;
 	padding-top: 40px;
 	padding-bottom: 40px;
 }
@@ -453,10 +460,7 @@ p.capitalize:first-letter {
     -o-background-size: 100%;
     background-size: 100%;
 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+
 }
 
 #cta01 h1 {
@@ -493,10 +497,6 @@ p.capitalize:first-letter {
     -o-background-size: 100%;
     background-size: 100%;
 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
 }
 
 #cta02 h1 {
@@ -528,10 +528,7 @@ h2 {
     -o-background-size: 100%;
     background-size: 100%;
 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+
 }
 
 
@@ -730,10 +727,10 @@ h2 {
 .h1ins {
     font-family: billabong;
     font-size: 56pt;
-    color: #ffffff;
+    color: #004FFF;
 }
 #header-il {
-    background: #0000FF;
+    background: #FFFF86;
     margin-top: 0px;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -742,20 +739,26 @@ h2 {
     background-position: center center;
     min-height: 300px;
     width: 100%;
+    color: #241023;
 
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
     background-size: 100%;
 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+
 }
 
+
+#header-il h2 {
+    color: #241023;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+
 #result-block {
-    background: #f5f5f5;
+    background: #FCFFB7;
     margin-top: 0px;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -769,34 +772,32 @@ h2 {
     -moz-background-size: 100%;
     -o-background-size: 100%;
     background-size: 100%;
+    color: #241023;
 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+
 }
 
 
 #result-block h1 {
-    color: black;
+    color: #241023;
     font-weight: 700;
     margin-bottom: 25px;
     font-size: 60px;
 }
 
 #result-block h2 {
-    color: black;
+    color: #241023;
     font-weight: 700;
     margin-bottom: 25px;
 }
 
 #result-block i {
-    color: black;
+    color: #241023;
     font-size: 45px;
 }
 
 #result-block2 {
-    background: #ff00ff;
+    background: #FFFF86;
     margin-top: 0px;
     padding-top: 50px;
     padding-bottom: 30px;
@@ -811,26 +812,79 @@ h2 {
     -o-background-size: 100%;
     background-size: 100%;
 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+
 }
 .h1rating-number {
-    color: #ffffff;
+    color: #241023;
     font-size: 80pt;
 
 }
 
 #result-block2 h1 {
-    color: #ffffff;
+    color: #241023;
     font-weight: 700;
     margin-bottom: 25px;
+    font-size: 60px;
+
+
 
 }
 
+#result-block2 h2 {
+    font-weight: 700;
+    margin-bottom: 25px;
+    font-size: 90px;
+    color: #241023;
+
+}
+
+
+#result-fav-tags {
+    background: #FCFFB7;
+    margin-top: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 300px;
+    width: 100%;
+    color: #241023;
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+
+}
+
+
+#result-fav-tags h1 {
+    font-weight: 700;
+    margin-bottom: 25px;
+    font-size: 60px;
+    text-align: center;
+    color: #241023;
+
+}
+
+
+#result-fav-tags h2 {
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: left;
+    font-size: 35px;
+    color: #241023;
+
+}
+
+#result-fav-tags i {
+    font-size: 45px;
+}
+
+
 #result-followers {
-    background: #E6E6FA;
+    background: #FFFF86;
     margin-top: 0px;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -845,34 +899,32 @@ h2 {
     -o-background-size: 100%;
     background-size: 100%;
 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+
 }
 
 
 #result-followers h1 {
-    color: black;
+    color: #241023;
     font-weight: 700;
     margin-bottom: 25px;
     font-size: 60px;
 }
 
 #result-followers h2 {
-    color: black;
+    color: #241023;
     font-weight: 700;
     margin-bottom: 25px;
+    font-size: 90px;
 }
 
 #result-followers i {
-    color: black;
+    color: #241023;
     font-size: 45px;
 }
 
 
 #result-follows {
-    background: #483D8B;
+    background: #FCFFB7;
     margin-top: 0px;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -887,33 +939,32 @@ h2 {
     -o-background-size: 100%;
     background-size: 100%;
 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+
 }
 
 
 #result-follows h1 {
-    color: #ffffff;
+    color: #241023;
     font-weight: 700;
     margin-bottom: 25px;
     font-size: 60px;
 }
 
 #result-follows h2 {
-    color: #ffffff;
+    color: #241023;
     font-weight: 700;
     margin-bottom: 25px;
+    font-size: 90px;
+
 }
 
 #result-follows i {
-    color: #ffffff;
+    color: #241023;
     font-size: 45px;
 }
 
 #result-mediacounts {
-    background: #8A2BE2;
+    background: #FFFF86;
     margin-top: 0px;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -928,34 +979,80 @@ h2 {
     -o-background-size: 100%;
     background-size: 100%;
 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+
 }
 
 
 #result-mediacounts h1 {
-    color: #ffffff;
+    color: #241023;
     font-weight: 700;
     margin-bottom: 25px;
     font-size: 60px;
 }
 
 #result-mediacounts h2 {
-    color: #ffffff;
+    color: #241023;
     font-weight: 700;
     margin-bottom: 25px;
+    font-size: 90px;
+
 }
 
 #result-mediacounts i {
-    color: #ffffff;
+    color: #241023;
     font-size: 45px;
 }
 
 
+
+
+#result-average-count {
+    background: #FCFFB7;
+    margin-top: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 300px;
+    width: 100%;
+    color: #241023;
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+}
+
+
+#result-average-count h1 {
+    font-weight: 700;
+    margin-bottom: 25px;
+    font-size: 35px;
+    text-align: center;
+}
+
+#result-average-count h2 {
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 90px;
+    color: #241023;
+
+}
+
+#result-average-count i {
+    font-size: 45px;
+}
+
+.result-inline {
+    display: inline-block;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
 #result-people {
-    background: #4B0082;
+    background: #FAFAD2;
     margin-top: 0px;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -970,15 +1067,176 @@ h2 {
     -o-background-size: 100%;
     background-size: 100%;
 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+
 }
 
 #result-people h1 {
-    color: #ffffff;
+    color: #241023;
     font-weight: 700;
     margin-bottom: 25px;
     font-size: 60px;
 }
+
+
+
+
+#result-top-like {
+    background: #FFFF86;
+    margin-top: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 300px;
+    width: 100%;
+    color: #241023;
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+}
+
+
+#result-top-like h1 {
+    font-weight: 700;
+    margin-bottom: 25px;
+    font-size: 35px;
+    text-align: center;
+}
+
+#result-top-like h2 {
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: left;
+    font-size: 25px;
+    color: #241023;
+
+}
+
+#result-top-like i {
+    font-size: 45px;
+}
+
+#result-top-like li div {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+#result-top-like li {
+    list-style: none;
+}
+
+#result-top-com{
+    background: #FAFAD2;
+    margin-top: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 300px;
+    width: 100%;
+    color: #241023;
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+}
+
+
+#result-top-com h1 {
+    font-weight: 700;
+    margin-bottom: 25px;
+    font-size: 35px;
+    text-align: center;
+}
+
+#result-top-com h2 {
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: left;
+    font-size: 25px;
+    color: #241023;
+
+}
+
+#result-top-com i {
+    font-size: 45px;
+}
+
+#result-top-com li div {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+#result-top-com li {
+    list-style: none;
+}
+
+
+#result-top-photos {
+    background: #FFFF86;
+    margin-top: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 300px;
+    width: 100%;
+    color: #241023;
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+}
+
+
+#result-top-photos h1 {
+    font-weight: 700;
+    margin-bottom: 25px;
+    font-size: 35px;
+    text-align: center;
+    color: #241023;
+}
+
+#result-top-photos h2 {
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: left;
+    font-size: 25px;
+
+}
+#result-top-photos h3 {
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 20px;
+
+}
+
+#result-top-photos i {
+    font-size: 45px;
+}
+
+#result-top-photos img {
+    width: 250px;
+    height: 250px;
+}
+
+
+#result-top-photos li div {
+    display: inline-block;
+    margin-right: 25px;
+
+}
+
+#result-top-photos li {
+    list-style: none;
+
+}
+
