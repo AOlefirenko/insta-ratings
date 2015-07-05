@@ -8,6 +8,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Noto+Sans|Roboto&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
     <link href="assets/css/main.css" rel="stylesheet">
@@ -15,7 +16,7 @@
     <link href="assets/css/animations.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="http://css-spinners.com/css/spinner/spinner.css" type="text/css">
+
     <!-- JavaScripts needed at the beginning
     ================================================== -->
     <script src="libs/angular/angular.min.js"></script>
@@ -29,30 +30,60 @@
 </head>
 
 
-</head>
+
 <body ng-app="app" ng-controller="AppController">
 
-<! ========== header-il BLOCK
-==============================================================================================
+<!---------------NAVBAR--------------------->
+
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid col-lg-10 col-lg-offset-1">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Instarating</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Мы в Instagram <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Что это такое?</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Выйти</a></li>
+                <li><button type="button" class="btn btn-primary btn-lg" href="http://localhost:3333/auth/instagram">Войти</button></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+
+<!-----ANV END---->
+
+
+
+<! ========== header-il BLOCK ==============================================================================================
 =============================================================================================================================>
 <div id="header-il">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h1 class="h1ins text-center">Instagram</h1>
+                <h2>Твой рейтинг и степень влияния на пользователей</h2>
 
-                <button type="button" class="btn btn-primary btn-lg" href="http://localhost:3333/auth/instagram">Войти
-                </button>
+                <!--<button type="button" class="btn btn-primary btn-lg" href="http://localhost:3333/auth/instagram">Войти</button>-->
             </div>
-        </div>
-        <!-- /row -->
-    </div>
-    <!-- /container -->
-</div>
-<! --/header-il-block -->
+        </div><!-- /row -->
+    </div><!-- /container -->
+</div><! --/header-il-block -->
 
-<! ========== RESULT BLOCK
-==============================================================================================
+<! ========== RESULT BLOCK ==============================================================================================
 =============================================================================================================================>
 <div id="result-block">
     <div class="container">
@@ -60,19 +91,14 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h1>{{profile.username}}</h1>
                 <img ng-src="{{profile.profile_picture}}" class="img-circle">
-
                 <h2>{{profile.full_name}}</h2>
             </div>
-        </div>
-        <!-- /row -->
-    </div>
-    <!-- /container -->
-</div>
-<! --/result-block -->
+        </div><!-- /row -->
+    </div><!-- /container -->
+</div><! --/result-block -->
 
 
-<! ========== RESULT BLOCK RATING
-==============================================================================================
+<! ========== RESULT BLOCK RATING ==============================================================================================
 =============================================================================================================================>
 <div id="result-block2">
     <div class="container">
@@ -81,18 +107,34 @@
                 <h1>Ваш рейтинг</h1>
                 <br>
                 <div class="spinner-loader" ng-if="!rating"></div>
-                <h1 class="h1rating-number">{{rating}}</h1>
+                <h2>{{rating}}</h2>
+
+              
             </div>
-        </div>
-        <!-- /row -->
-    </div>
-    <!-- /container -->
-</div>
-<! --/result-block -->
+        </div><!-- /row -->
+    </div><!-- /container -->
+</div><! --/result-block -->
 
 
-<! ========== RESULT BLOCK FOLLOWERS
-==============================================================================================
+<! ========== RESULT BLOCK FAV TAGS ==============================================================================================
+=============================================================================================================================>
+<div id="result-fav-tags">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h1>Ваши любимые #теги</h1>
+                <br>
+                <h2> #dailypic #follow #photooftheday #fun
+                    #love #jj #instadaily #igers #igersoftheday #me
+                    #gramoftheday #instagramhub #instamood #bestoftheday #tumblr
+                    #picoftheday #igdaily #webstagram #potd #instatalent #ig_watchers
+                    #insta_global #instago #ig_snapshots #gang_family </h2>
+            </div>
+        </div><!-- /row -->
+    </div><!-- /container -->
+</div><! --/result-block -->
+
+<! ========== RESULT BLOCK FOLLOWERS ==============================================================================================
 =============================================================================================================================>
 <div id="result-followers">
     <div class="container">
@@ -100,19 +142,14 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h1>На вас подписаны</h1>
                 <br>
-
-                <h1 class="h1rating-number">{{counts.followed_by}}</h1>
+                <h2>{{counts.followed_by}}</h2>
             </div>
-        </div>
-        <!-- /row -->
-    </div>
-    <!-- /container -->
-</div>
-<! --/result-block -->
+        </div><!-- /row -->
+    </div><!-- /container -->
+</div><! --/result-block -->
 
 
-<! ========== RESULT BLOCK FOLLOWS
-==============================================================================================
+<! ========== RESULT BLOCK FOLLOWS ==============================================================================================
 =============================================================================================================================>
 <div id="result-follows">
     <div class="container">
@@ -120,19 +157,14 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h1>Вы подписаны на</h1>
                 <br>
-
-                <h1 class="h1rating-number">{{counts.follows}}</h1>
+                <h2>{{counts.follows}}</h2>
             </div>
-        </div>
-        <!-- /row -->
-    </div>
-    <!-- /container -->
-</div>
-<! --/result-block -->
+        </div><!-- /row -->
+    </div><!-- /container -->
+</div><! --/result-block -->
 
 
-<! ========== RESULT BLOCK MEDIA COUNTS
-==============================================================================================
+<! ========== RESULT BLOCK MEDIA COUNTS ==============================================================================================
 =============================================================================================================================>
 <div id="result-mediacounts">
     <div class="container">
@@ -140,29 +172,169 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h1>Всего публикаций</h1>
                 <br>
-
-                <h1 class="h1rating-number">{{counts.media}}</h1>
+                <h2>{{counts.media}}</h2>
             </div>
-        </div>
-        <!-- /row -->
-    </div>
-    <!-- /container -->
-</div>
-<! --/result-block -->
+        </div><!-- /row -->
+    </div><!-- /container -->
+</div><! --/result-block -->
 
-<! ========== RESULT BLOCK PEOPLE
-==============================================================================================
+<! ========== RESULT BLOCK AVERAGE COUNT ==============================================================================================
+=============================================================================================================================>
+<div id="result-average-count">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="result-inline">
+                    <h1>В среднем лайков на фото</h1>
+                    <h2>{{counts.media}}</h2>
+                </div>
+                <div class="result-inline">
+                    <h1>В среднем комментариев на фото</h1>
+                    <h2>{{counts.media}}</h2>
+                </div>
+            </div>
+        </div><!-- /row -->
+    </div><!-- /container -->
+</div><! --/result-block -->
+
+
+<! ========== RESULT BLOCK TOP LIKERS ==============================================================================================
+=============================================================================================================================>
+<div id="result-top-like">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 centered">
+                <h1>Поставили больше всего лайков</h1>
+                    <li>
+                        <div class="result-top-like-avatars">
+                            <h2>{{profile.username}}</h2>
+                            <img ng-src="{{profile.profile_picture}}" class="img-circle">
+                        </div>
+                        <div class="result-top-like-avatars">
+                            <h2>{{profile.username}}</h2>
+                            <img ng-src="{{profile.profile_picture}}" class="img-circle">
+                        </div>
+                        <div class="result-top-like-avatars">
+                            <h2>{{profile.username}}</h2>
+                            <img ng-src="{{profile.profile_picture}}" class="img-circle">
+                        </div>
+                    </li>
+            </div>
+        </div><!-- /row -->
+    </div><!-- /container -->
+</div><! --/result-block -->
+
+
+
+<! ========== RESULT BLOCK TOP COMMENTERS ==============================================================================================
+=============================================================================================================================>
+<div id="result-top-com">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 centered">
+                <h1>Оставили больше всего комментариев</h1>
+                <li>
+                    <div>
+                        <h2>{{profile.username}}</h2>
+                        <img ng-src="{{profile.profile_picture}}" class="img-circle">
+                    </div>
+                    <div>
+                        <h2>{{profile.username}}</h2>
+                        <img ng-src="{{profile.profile_picture}}" class="img-circle">
+                    </div>
+                    <div>
+                        <h2>{{profile.username}}</h2>
+                        <img ng-src="{{profile.profile_picture}}" class="img-circle">
+                    </div>
+                </li>
+            </div>
+        </div><!-- /row -->
+    </div><!-- /container -->
+</div><! --/result-block -->
+
+
+
+<! ========== RESULT BLOCK TOP LIKED PHOTOS ==============================================================================================
+=============================================================================================================================>
+<div id="result-top-photos">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Самые интересные фотографии</h1>
+                <li>
+                    <div>
+                            <div>
+                                <img ng-src="{{profile.profile_picture}}">
+                                <p>100 Лайков</p>
+                            </div>
+                    </div>
+
+
+                </li>
+            </div>
+        </div><!-- /row -->
+    </div><!-- /container -->
+</div><! --/result-block -->
+
+<! ========== RESULT BLOCK TOP COMMENTED PHOTOS ==============================================================================================
+=============================================================================================================================>
+<div id="result-top-photos">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Самые интересные фотографии</h1>
+                <li>
+                    <div>
+                        <div>
+                            <img ng-src="{{profile.profile_picture}}">
+                            <p>100 Комментариев</p>
+                        </div>
+                    </div>
+
+
+                </li>
+            </div>
+        </div><!-- /row -->
+    </div><!-- /container -->
+</div><! --/result-block -->
+
+
+
+
+<! ========== RESULT BLOCK PEOPLE ==============================================================================================
 =============================================================================================================================>
 <div id="result-people">
 
 
-    <h1>Сейчас проверяют свой рейтинг</h1>
-    <br>
-    <img ng-src="{{user.profile_picture}}" title="{{user.username}}" ng-repeat="user in popular">
+
+                <h1>Сейчас проверяют свой рейтинг</h1>
+                <br>
+                <img ng-src="{{user.profile_picture}}" ng-repeat="user in popular">
 
 
-</div>
-<! --/result-block -->
+
+</div><! --/result-block -->
+
+
+
+<! ========== FOOTER ========================================================================================================
+=============================================================================================================================>
+
+<div id="f">
+    <div class="container">
+        <div class="row">
+            <!-- ADDRESS -->
+            <div class="col-md-3">
+                <h4>Мы в Instagram</h4>
+
+            </div><! --/col-lg-3 -->
+
+
+
+        </div><! --/row -->
+    </div><!-- /container -->
+</div><!-- /f -->
+
 
 
 <script src="app/app.js"></script>
